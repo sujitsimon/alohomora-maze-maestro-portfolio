@@ -326,13 +326,46 @@ const Hero = () => {
           <div className="relative">
             <div className="w-64 h-64 md:w-80 md:h-80 bg-tech-lightGray rounded-full flex items-center justify-center">
               <div className="w-48 h-48 md:w-60 md:h-60 bg-white rounded-full shadow-lg flex items-center justify-center">
-                {/* This is a placeholder for the mouse image/model. In a real implementation, you'd use an actual image. */}
+                {/* Micromouse Robot - More detailed design */}
                 <div className="w-32 h-24 bg-tech-gray rounded-lg relative">
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-tech-accent rounded-full"></div>
-                  <div className="absolute -bottom-2 left-1/3 transform -translate-x-1/2 w-8 h-2 bg-tech-blue rounded-full"></div>
-                  <div className="absolute -bottom-2 right-1/3 transform translate-x-1/2 w-8 h-2 bg-tech-blue rounded-full"></div>
-                  <div className="absolute top-1/3 left-1/4 w-1 h-1 bg-tech-blue rounded-full"></div>
-                  <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-tech-blue rounded-full"></div>
+                  {/* Robot body with more details */}
+                  <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                    {/* PCB (circuit board) base */}
+                    <div className="absolute inset-1 bg-green-700 rounded-lg"></div>
+                    
+                    {/* Front sensors */}
+                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                      <div className="w-3 h-3 bg-black rounded-full"></div>
+                      <div className="w-3 h-3 bg-black rounded-full"></div>
+                      <div className="w-3 h-3 bg-black rounded-full"></div>
+                    </div>
+                    
+                    {/* Motor and wheels */}
+                    <div className="absolute bottom-0 left-3 w-4 h-8 bg-gray-700 rounded"></div>
+                    <div className="absolute bottom-1 left-1 w-5 h-5 bg-black rounded-full border-2 border-gray-400"></div>
+                    
+                    <div className="absolute bottom-0 right-3 w-4 h-8 bg-gray-700 rounded"></div>
+                    <div className="absolute bottom-1 right-1 w-5 h-5 bg-black rounded-full border-2 border-gray-400"></div>
+                    
+                    {/* Microcontroller chip */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-8 bg-black rounded-sm">
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-6 bg-gray-800 rounded-sm flex items-center justify-center">
+                        <div className="text-green-400 text-[6px] font-mono">MCU</div>
+                      </div>
+                    </div>
+                    
+                    {/* Battery pack */}
+                    <div className="absolute top-3 right-3 w-6 h-8 bg-blue-900 rounded"></div>
+                    
+                    {/* LEDs */}
+                    <div className="absolute top-3 left-3 w-1 h-1 bg-red-500 rounded-full animate-pulse"></div>
+                    <div className="absolute top-5 left-3 w-1 h-1 bg-green-500 rounded-full"></div>
+                    
+                    {/* Tiny electronic components */}
+                    <div className="absolute top-8 left-4 w-2 h-1 bg-gray-800 rounded-sm"></div>
+                    <div className="absolute top-10 left-4 w-2 h-1 bg-gray-800 rounded-sm"></div>
+                    <div className="absolute top-8 right-4 w-2 h-1 bg-gray-800 rounded-sm"></div>
+                  </div>
                 </div>
               </div>
             </div>
