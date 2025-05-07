@@ -326,45 +326,53 @@ const Hero = () => {
           <div className="relative">
             <div className="w-64 h-64 md:w-80 md:h-80 bg-tech-lightGray rounded-full flex items-center justify-center">
               <div className="w-48 h-48 md:w-60 md:h-60 bg-white rounded-full shadow-lg flex items-center justify-center">
-                {/* Micromouse Robot - More detailed design */}
-                <div className="w-32 h-24 bg-tech-gray rounded-lg relative">
-                  {/* Robot body with more details */}
-                  <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                    {/* PCB (circuit board) base */}
-                    <div className="absolute inset-1 bg-green-700 rounded-lg"></div>
-                    
-                    {/* Front sensors */}
-                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                      <div className="w-3 h-3 bg-black rounded-full"></div>
-                      <div className="w-3 h-3 bg-black rounded-full"></div>
-                      <div className="w-3 h-3 bg-black rounded-full"></div>
-                    </div>
-                    
-                    {/* Motor and wheels */}
-                    <div className="absolute bottom-0 left-3 w-4 h-8 bg-gray-700 rounded"></div>
-                    <div className="absolute bottom-1 left-1 w-5 h-5 bg-black rounded-full border-2 border-gray-400"></div>
-                    
-                    <div className="absolute bottom-0 right-3 w-4 h-8 bg-gray-700 rounded"></div>
-                    <div className="absolute bottom-1 right-1 w-5 h-5 bg-black rounded-full border-2 border-gray-400"></div>
-                    
-                    {/* Microcontroller chip */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-8 bg-black rounded-sm">
-                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-6 bg-gray-800 rounded-sm flex items-center justify-center">
-                        <div className="text-green-400 text-[6px] font-mono">MCU</div>
+                {/* Creative Micromouse Robot */}
+                <div className="w-32 h-24 relative">
+                  {/* Mouse body - more rounded and colorful */}
+                  <div className="absolute top-0 left-0 w-full h-full rounded-3xl bg-gradient-to-br from-purple-500 to-indigo-600 shadow-lg">
+                    {/* Mouse face */}
+                    <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-24 h-16 bg-white/90 rounded-2xl">
+                      {/* Eyes */}
+                      <div className="absolute top-3 left-4 flex space-x-8">
+                        <div className="w-4 h-4 bg-black rounded-full flex items-center justify-center">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full relative -top-0.5 -left-0.5"></div>
+                        </div>
+                        <div className="w-4 h-4 bg-black rounded-full flex items-center justify-center">
+                          <div className="w-1.5 h-1.5 bg-white rounded-full relative -top-0.5 -left-0.5"></div>
+                        </div>
                       </div>
+                      
+                      {/* Nose */}
+                      <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-5 h-3 bg-pink-400 rounded-full"></div>
+                      
+                      {/* Whiskers */}
+                      <div className="absolute top-9 left-6 w-6 h-0.5 bg-gray-400 transform rotate-12"></div>
+                      <div className="absolute top-10 left-6 w-5 h-0.5 bg-gray-400"></div>
+                      <div className="absolute top-11 left-6 w-6 h-0.5 bg-gray-400 transform -rotate-12"></div>
+                      
+                      <div className="absolute top-9 right-6 w-6 h-0.5 bg-gray-400 transform -rotate-12"></div>
+                      <div className="absolute top-10 right-6 w-5 h-0.5 bg-gray-400"></div>
+                      <div className="absolute top-11 right-6 w-6 h-0.5 bg-gray-400 transform rotate-12"></div>
                     </div>
                     
-                    {/* Battery pack */}
-                    <div className="absolute top-3 right-3 w-6 h-8 bg-blue-900 rounded"></div>
+                    {/* Ears */}
+                    <div className="absolute -top-3 left-3 w-6 h-6 bg-pink-300 rounded-full"></div>
+                    <div className="absolute -top-3 right-3 w-6 h-6 bg-pink-300 rounded-full"></div>
                     
-                    {/* LEDs */}
-                    <div className="absolute top-3 left-3 w-1 h-1 bg-red-500 rounded-full animate-pulse"></div>
-                    <div className="absolute top-5 left-3 w-1 h-1 bg-green-500 rounded-full"></div>
+                    {/* Wheels (hidden but implied) */}
+                    <div className="absolute -bottom-1 left-4 w-6 h-2 bg-gray-700 rounded-full"></div>
+                    <div className="absolute -bottom-1 right-4 w-6 h-2 bg-gray-700 rounded-full"></div>
                     
-                    {/* Tiny electronic components */}
-                    <div className="absolute top-8 left-4 w-2 h-1 bg-gray-800 rounded-sm"></div>
-                    <div className="absolute top-10 left-4 w-2 h-1 bg-gray-800 rounded-sm"></div>
-                    <div className="absolute top-8 right-4 w-2 h-1 bg-gray-800 rounded-sm"></div>
+                    {/* Tail */}
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1 h-6 bg-pink-400 rounded-full origin-top animate-[wiggle_2s_ease-in-out_infinite]"></div>
+                    
+                    {/* Sensor "antennas" */}
+                    <div className="absolute -top-4 left-1/4 w-1 h-4 bg-yellow-400 rounded-full">
+                      <div className="w-2 h-2 bg-yellow-300 rounded-full absolute -top-1.5 left-1/2 transform -translate-x-1/2 animate-pulse"></div>
+                    </div>
+                    <div className="absolute -top-4 right-1/4 w-1 h-4 bg-yellow-400 rounded-full">
+                      <div className="w-2 h-2 bg-yellow-300 rounded-full absolute -top-1.5 left-1/2 transform -translate-x-1/2 animate-pulse"></div>
+                    </div>
                   </div>
                 </div>
               </div>
