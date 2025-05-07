@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h2 className="text-2xl font-bold mb-4">
-              Micro<span className="text-tech-blue">Mouse</span>
+              Team <span className="text-tech-blue">Alohomora</span>
             </h2>
             <p className="text-gray-300 mb-4 max-w-md">
               An award-winning autonomous robot designed to navigate complex mazes with speed and precision.
@@ -106,7 +106,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Micro Mouse Team. All rights reserved.
+            &copy; {new Date().getFullYear()} Team Alohomora. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
