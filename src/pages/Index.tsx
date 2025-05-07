@@ -1,12 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Features from "@/components/Features";
+import Gallery from "@/components/Gallery";
+import Timeline from "@/components/Timeline";
+import Team from "@/components/Team";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import { useEffect } from "react";
+import { Github, Linkedin, Youtube } from "lucide-react";
 
 const Index = () => {
+  // Smooth scrolling for anchor links
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const href = this.getAttribute('href');
+        if (!href) return;
+        
+        const targetElement = document.querySelector(href);
+        if (!targetElement) return;
+        
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navbar />
+      <Hero />
+      <About />
+      <Features />
+      <Gallery />
+      <Timeline />
+      <Team />
+      <Contact />
+      <Footer />
     </div>
   );
 };
